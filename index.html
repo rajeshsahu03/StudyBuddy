@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyBuddy | Student Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <aside class="sidebar">
+        <h2>StudyBuddy<span>.</span></h2>
+        <p class="menu-title">MENU</p>
+        <nav>
+            <a class="active" href="#">Dashboard</a>
+            <a href="#tasks">My Tasks</a>
+            <a href="#focus">Focus Timer</a>
+            <a href="#notes">My Notes</a>
+        </nav>
+        <p class="sidebar-bottom">Your goals. Your growth.</p>
+    </aside>
+
+    <main class="main-content">
+        <header class="topbar">
+            <div>
+                <p class="muted">YOUR PERSONAL STUDY SPACE</p>
+                <h1>Welcome back, Student! 👋</h1>
+                <p class="muted">Small steps every day lead to big results.</p>
+            </div>
+            <div class="profile">S</div>
+        </header>
+
+        <section class="stats">
+            <div class="stat-card">
+                <p>Total Tasks</p>
+                <h2 id="totalTasks">0</h2>
+            </div>
+            <div class="stat-card">
+                <p>Completed</p>
+                <h2 id="completedTasks">0</h2>
+            </div>
+            <div class="stat-card">
+                <p>Study Goal</p>
+                <h2>Stay Focused</h2>
+            </div>
+        </section>
+
+        
+        <section class="panel" id="progress">
+            <h2>📊 Your Progress</h2>
+            <p class="muted">Keep going! Every completed task counts.</p>
+
+            <div class="progress-info">
+                <span>Tasks Completed</span>
+                <span id="progressPercent">0%</span>
+            </div>
+
+            <div class="progress-track">
+                <div id="progressBar" class="progress-fill"></div>
+            </div>
+
+            <p id="progressMessage" class="muted">
+                Let's get started!
+            </p>
+        </section>
+
+        <section class="panel" id="tasks">
+            <h2>Today's Tasks</h2>
+            <p class="muted">What do you want to accomplish today?</p>
+            <form id="taskForm">
+                <input id="taskInput" type="text"
+                    placeholder="Enter a task, e.g. Study C++" required>
+                <button type="submit">+ Add Task</button>
+            </form>
+            <ul id="taskList"></ul>
+        </section>
+
+        <section class="panel" id="focus">
+            <h2>Focus Timer</h2>
+            <p class="muted">Take one step at a time.</p>
+            <div id="timer">25:00</div>
+            <button id="startTimer">Start Focus</button>
+            <button id="resetTimer" class="secondary">Reset</button>
+        </section>
+
+        <section class="panel" id="notes">
+            <h2>Quick Notes</h2>
+            <textarea id="notesInput"
+                placeholder="Write your ideas or study notes here..."></textarea>
+            <button id="saveNotes">Save Notes</button>
+            <p id="noteStatus" class="muted"></p>
+        </section>
+
+        <footer>Made with focus & consistency | StudyBuddy</footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
